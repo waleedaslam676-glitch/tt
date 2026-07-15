@@ -1,0 +1,100 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+body { background: #14161a; color: #eee; }
+
+.app { display: flex; height: 100vh; }
+
+.sidebar {
+  width: 300px;
+  background: #1c1f26;
+  padding: 16px;
+  overflow-y: auto;
+  border-right: 1px solid #2a2e38;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar h2 { font-size: 16px; color: #4fc3f7; }
+
+#refreshBtn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+#refreshBtn:hover { background: #1d4ed8; }
+
+.device-list { display: flex; flex-direction: column; gap: 8px; }
+
+.device-item {
+  background: #262a33;
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+.device-item.main-selected { border: 1px solid #4fc3f7; }
+
+.device-item .info { flex: 1; }
+.device-item .model { font-weight: 600; }
+.device-item .serial { color: #888; font-size: 11px; }
+
+.sync-box { background: #262a33; padding: 10px; border-radius: 8px; }
+.sync-box .hint { font-size: 11px; color: #999; margin-top: 6px; line-height: 1.4; }
+
+.toggle { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+
+.text-box { display: flex; gap: 6px; }
+.text-box input {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #0f1115;
+  color: #eee;
+}
+.text-box button, .key-box button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.key-box { display: flex; gap: 6px; }
+
+.main-view { flex: 1; display: flex; flex-direction: column; }
+
+.toolbar {
+  height: 44px;
+  background: #1c1f26;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  font-size: 13px;
+  border-bottom: 1px solid #2a2e38;
+}
+
+.canvas-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a0b0d;
+}
+
+#screenCanvas {
+  max-height: 95%;
+  max-width: 95%;
+  border: 2px solid #2a2e38;
+  border-radius: 12px;
+  cursor: pointer;
+}

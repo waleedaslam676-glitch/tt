@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-Droid Control</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="sidebar">
+      <h2>📱 Devices</h2>
+      <button id="refreshBtn">🔄 Refresh Devices</button>
+      <div id="deviceList" class="device-list"></div>
+
+      <div class="sync-box">
+        <label class="toggle">
+          <input type="checkbox" id="syncToggle">
+          <span>Control Sync</span>
+        </label>
+        <p class="hint">Select a MAIN device (radio) + check devices to SYNC to it. Actions on main replicate to synced devices.</p>
+      </div>
+
+      <div class="text-box">
+        <input type="text" id="textInput" placeholder="Type text to send...">
+        <button id="sendTextBtn">Send</button>
+      </div>
+
+      <div class="key-box">
+        <button data-key="4">◀ Back</button>
+        <button data-key="3">● Home</button>
+        <button data-key="66">↵ Enter</button>
+      </div>
+    </div>
+
+    <div class="main-view">
+      <div class="toolbar">
+        <span id="mainDeviceLabel">No main device selected</span>
+        <label><input type="checkbox" id="liveToggle" checked> Live refresh</label>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="screenCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

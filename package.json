@@ -1,0 +1,32 @@
+{
+  "name": "multi-droid-control",
+  "version": "1.0.0",
+  "description": "Free multi-device Android control and mouse-sync mirroring tool (ADB based)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "author": "Waleed",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "publish": null,
+    "appId": "com.waleed.multidroidcontrol",
+    "productName": "Multi-Droid Control",
+    "win": {
+      "target": "nsis"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "adb.exe",
+      "AdbWinApi.dll",
+      "AdbWinUsbApi.dll"
+    ]
+  }
+}
